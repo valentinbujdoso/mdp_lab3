@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dirtywhite"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/amazon"
+        android:layout_alignParentTop="true" />
+    
+    <TextView
+        android:id="@+id/ln"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/image"
+        />
+
+    <TextView
+        android:id="@+id/header_text"
+        android:text="Sign in to Zappos.com using your amazon account"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ln" />
+
+    <TextView
+        android:id="@+id/signin_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_text"
+        android:layout_alignParentStart="true"
+        android:paddingTop="35dp"
+        android:paddingBottom="10dp"
+        android:text="Sign in"
+        android:textSize="24dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/forgotpwd_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_text"
+        android:textColor="@color/blue"
+        android:layout_alignParentEnd="true"
+        android:paddingTop="35dp"
+        android:text="Forgott password"/>
+
+    <EditText
+        android:id="@+id/loginemail_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Email (phone for mobile accounts)"
+        android:background="@drawable/logintext"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/signin_text"
+        android:paddingLeft="10dp" />
+
+    <EditText
+        android:id="@+id/loginpwd_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Amazon password"
+        android:background="@drawable/logintext"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/loginemail_text"
+        android:paddingLeft="10dp" />
+
+    <CheckBox
+        android:id="@+id/shw_pwd_chck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/white"
+        android:text="Show password"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/loginpwd_text"/>
+
+    <CheckBox
+        android:id="@+id/keep_me_signed_chck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/white"
+        android:text="Keep me signed in. Details"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/shw_pwd_chck"/>
+
+    <Button
+        android:id="@+id/signin_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign in"
+        android:textAllCaps="false"
+        android:layout_below="@+id/keep_me_signed_chck"
+        android:background="@drawable/login_button"/>
+
+    <TableLayout
+        android:id="@+id/table_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signin_button"
+        android:paddingTop="25dp"
+        android:paddingBottom="10dp"
+        android:stretchColumns="0,2" >
+        <TableRow>
+            <TextView android:background="@drawable/line" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="New to amazon?" />
+
+            <TextView android:background="@drawable/line" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/create_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/table_layout"
+        android:text="Create new Amazon account"
+        android:textAllCaps="false"
+        android:background="@drawable/create_button"/>
+
+    <TextView
+        android:id="@+id/line"
+        android:paddingTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/create_button"
+        android:background="@drawable/line" />
+
+    <TextView
+        android:id="@+id/footerlink_text"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:text="Conditions of Use Privacy Notice"
+        android:textAlignment="center"
+        android:textColor="@color/blue"/>
+
+    <TextView
+        android:id="@+id/footertext_text"
+        android:paddingTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/footerlink_text"
+        android:text="\@ 1996-2024, Amazon Inc, or its affiliates"
+        android:textAlignment="center" />
+
+
+
+
+
+
+
+</RelativeLayout>
